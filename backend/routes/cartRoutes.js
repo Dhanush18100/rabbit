@@ -9,9 +9,9 @@ const router=express.Router();
 //Helper function to get a cart by user Id or guest Id
 const getCart=async(userId,guestId)=>{
     if(userId){
-        return await Cart.findOne({user:userId});
+        return await Cart.findOne({userId:userId});
     }else if(guestId){
-        return await Cart.findOne({guestId});
+        return await Cart.findOne({guestId:guestId});
     }
     return null;
 }
@@ -58,7 +58,7 @@ router.post('/',async(req,res)=>{
         }else{
             //Create a new cart for guest or user
             const newCart=await Cart.create({
-                user:userId?userId:undefined,
+                userId:userId?userId:undefined,
                 guestId:guestId?guestId:"guest_"+new Date().getTime(),
                 
                 products:[
@@ -154,7 +154,8 @@ router.delete("/",async(req,res)=>{
 //@access Public
 
 router.get("/",async(req,res)=>{
-    const { userId,guestId} =req.body;
+    const { userId,guestId} =req.query;
+    console.log("GET /api/cart query:", req.query);
     try {
         const cart=await getCart(userId,guestId)
 
@@ -181,7 +182,7 @@ router.post('/merge',protect,async(req,res)=>{
         //Find guest cart and usercart
 
         const guestCart=await Cart.findOne({guestId});
-         const userCart=await Cart.findOne({user:req.user._id});
+         const userCart=await Cart.findOne({userId:req.user._id});
 
          if(guestCart){
             if(guestCart.products.length===0){
@@ -218,7 +219,7 @@ router.post('/merge',protect,async(req,res)=>{
             }else{
                 // if user has no existing cart assign guest cart to user
 
-                guestCart.user=req.user._id;
+                guestCart.userId=req.user._id;
                 guestCart.guestId=undefined;
                 await guestCart.save();
 
