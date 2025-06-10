@@ -1,990 +1,3206 @@
 // product.js:
 
-const products = [
+const products =[
   {
-    name: "Classic Oxford Button-Down Shirt",
-    description:
-      "This classic Oxford shirt is tailored for a polished yet casual look. Crafted from high-quality cotton, it features a button-down collar and a comfortable, slightly relaxed fit. Perfect for both formal and casual occasions, it comes with long sleeves, a button placket, and a yoke at the back. The shirt is finished with a gently rounded hem and adjustable button cuffs.",
-    price: 39.99,
-    discountPrice: 34.99,
-    countInStock: 20,
-    sku: "OX-SH-001",
-    category: "Top Wear",
-    brand: "Urban Threads",
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    colors: ["Red", "Blue", "Yellow"],
-    collections: "Business Casual",
-    material: "Cotton",
-    gender: "Men",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=39",
-        altText: "Classic Oxford Button-Down Shirt Front View",
-      },
-      {
-        url: "https://picsum.photos/500/500?random=40",
-        altText: "Classic Oxford Button-Down Shirt Back View",
-      },
+    "name": "Urban Threads Top 1",
+    "description": "Cotton top wear item designed for men under the Business Casual line.",
+    "price": 29.99,
+    "discountPrice": 29.99,
+    "countInStock": 0,
+    "sku": "UR-001",
+    "category": "Top Wear",
+    "brand": "Urban Threads",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
     ],
-    rating: 4.5,
-    numReviews: 12,
+    "colors": [
+      "Black",
+      "Blue"
+    ],
+    "collections": "Business Casual",
+    "material": "Cotton",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560464024-54e05c1cb0fe?auto=format&fit=crop&w=500",
+        "altText": "Man wearing a blue button-down Oxford shirt"
+      }
+    ],
+    "rating": 3.5,
+    "numReviews": 0
   },
   {
-    name: "Slim-Fit Stretch Shirt",
-    description:
-      "A versatile slim-fit shirt perfect for business or evening events. Designed with a fitted silhouette, the added stretch provides maximum comfort throughout the day. Features a crisp turn-down collar, button placket, and adjustable cuffs.",
-    price: 29.99,
-    discountPrice: 24.99,
-    countInStock: 35,
-    sku: "SLIM-SH-002",
-    category: "Top Wear",
-    brand: "Modern Fit",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["Black", "Navy Blue", "Burgundy"],
-    collections: "Formal Wear",
-    material: "Cotton Blend",
-    gender: "Men",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=41",
-        altText: "Slim-Fit Stretch Shirt Front View",
-      },
-      {
-        url: "https://picsum.photos/500/500?random=42",
-        altText: "Slim-Fit Stretch Shirt Back View",
-      },
+    "name": "Metro Mode Bottom 2",
+    "description": "Denim bottom wear item designed for men under the Weekend Vibes line.",
+    "price": 39.99,
+    "discountPrice": 38.49,
+    "countInStock": 3,
+    "sku": "ME-002",
+    "category": "Bottom Wear",
+    "brand": "Metro Mode",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
     ],
-    rating: 4.8,
-    numReviews: 15,
+    "colors": [
+      "Blue",
+      "White"
+    ],
+    "collections": "Weekend Vibes",
+    "material": "Denim",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1531966668630-d7a99b27f590?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing a white fashion blouse"
+      }
+    ],
+    "rating": 3.6,
+    "numReviews": 7
   },
   {
-    name: "Casual Denim Shirt",
-    description:
-      "This casual denim shirt is made from lightweight cotton denim. It features a regular fit, snap buttons, and a straight hem. With Western-inspired details, this shirt is perfect for layering or wearing solo.",
-    price: 49.99,
-    discountPrice: 44.99,
-    countInStock: 15,
-    sku: "CAS-DEN-003",
-    category: "Top Wear",
-    brand: "Street Style",
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    colors: ["Light Blue", "Dark Wash"],
-    collections: "Casual Wear",
-    material: "Denim",
-    gender: "Men",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=43",
-        altText: "Casual Denim Shirt Front View",
-      },
-      {
-        url: "https://picsum.photos/500/500?random=44",
-        altText: "Casual Denim Shirt Back View",
-      },
+    "name": "Style Hub Top 3",
+    "description": "Polyester top wear item designed for women under the Summer Essentials line.",
+    "price": 49.99,
+    "discountPrice": 46.99,
+    "countInStock": 6,
+    "sku": "ST-003",
+    "category": "Top Wear",
+    "brand": "Style Hub",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
-    rating: 4.6,
-    numReviews: 8,
+    "colors": [
+      "White",
+      "Beige"
+    ],
+    "collections": "Summer Essentials",
+    "material": "Polyester",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583007971185-b7ef5a7a35d0?auto=format&fit=crop&w=500",
+        "altText": "Pair of slim-fit men's chinos"
+      }
+    ],
+    "rating": 3.7,
+    "numReviews": 14
   },
   {
-    name: "Printed Resort Shirt",
-    description:
-      "Designed for summer, this printed resort shirt is perfect for vacation or weekend getaways. It features a relaxed fit, short sleeves, and a camp collar. The all-over tropical print adds a playful vibe.",
-    price: 29.99,
-    discountPrice: 22.99,
-    countInStock: 25,
-    sku: "PRNT-RES-004",
-    category: "Top Wear",
-    brand: "Beach Breeze",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["Tropical Print", "Navy Palms"],
-    collections: "Vacation Wear",
-    material: "Viscose",
-    gender: "Men",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=45",
-        altText: "Printed Resort Shirt Front View",
-      },
-      {
-        url: "https://picsum.photos/500/500?random=1",
-        altText: "Printed Resort Shirt Back View",
-      },
+    "name": "Bold Edge Bottom 4",
+    "description": "Linen Blend bottom wear item designed for women under the Formal Attire line.",
+    "price": 59.99,
+    "discountPrice": 55.49,
+    "countInStock": 9,
+    "sku": "BO-004",
+    "category": "Bottom Wear",
+    "brand": "Bold Edge",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
-    rating: 4.4,
-    numReviews: 10,
+    "colors": [
+      "Beige",
+      "Gray"
+    ],
+    "collections": "Formal Attire",
+    "material": "Linen Blend",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585386959984-a415522c12f0?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing flowy palazzo pants"
+      }
+    ],
+    "rating": 3.8,
+    "numReviews": 21
   },
   {
-    name: "Slim-Fit Easy-Iron Shirt",
-    description:
-      "A slim-fit, easy-iron shirt in woven cotton fabric with a fitted silhouette. Features a turn-down collar, classic button placket, and a yoke at the back. Long sleeves and adjustable button cuffs with a rounded hem.",
-    price: 34.99,
-    discountPrice: 29.99,
-    countInStock: 30,
-    sku: "SLIM-EIR-005",
-    category: "Top Wear",
-    brand: "Urban Chic",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["White", "Gray"],
-    collections: "Business Wear",
-    material: "Cotton",
-    gender: "Men",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=47",
-        altText: "Slim-Fit Easy-Iron Shirt Front View",
-      },
-      {
-        url: "https://picsum.photos/500/500?random=2",
-        altText: "Slim-Fit Easy-Iron Shirt Front View",
-      },
+    "name": "Elegance Wear Top 5",
+    "description": "Cotton top wear item designed for men under the Business Casual line.",
+    "price": 69.99,
+    "discountPrice": 63.99,
+    "countInStock": 12,
+    "sku": "EL-005",
+    "category": "Top Wear",
+    "brand": "Elegance Wear",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
     ],
-    rating: 5,
-    numReviews: 14,
+    "colors": [
+      "Gray",
+      "Red"
+    ],
+    "collections": "Business Casual",
+    "material": "Cotton",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560464024-54e05c1cb0fe?auto=format&fit=crop&w=500",
+        "altText": "Man wearing a blue button-down Oxford shirt"
+      }
+    ],
+    "rating": 3.9,
+    "numReviews": 28
   },
   {
-    name: "Polo T-Shirt with Ribbed Collar",
-    description:
-      "A wardrobe classic, this polo t-shirt features a ribbed collar and cuffs. Made from 100% cotton, it offers breathability and comfort throughout the day. Tailored in a slim fit with a button placket at the neckline.",
-    price: 24.99,
-    discountPrice: 19.99,
-    countInStock: 50,
-    sku: "POLO-TSH-006",
-    category: "Top Wear",
-    brand: "Polo Classics",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["White", "Navy", "Red"],
-    collections: "Casual Wear",
-    material: "Cotton",
-    gender: "Men",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=3",
-        altText: "Polo T-Shirt Front View",
-      },
-      {
-        url: "https://picsum.photos/500/500?random=4",
-        altText: "Polo T-Shirt Back View",
-      },
+    "name": "Urban Threads Bottom 6",
+    "description": "Denim bottom wear item designed for men under the Weekend Vibes line.",
+    "price": 29.99,
+    "discountPrice": 29.99,
+    "countInStock": 15,
+    "sku": "UR-006",
+    "category": "Bottom Wear",
+    "brand": "Urban Threads",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
     ],
-    rating: 4.3,
-    numReviews: 22,
+    "colors": [
+      "Red",
+      "Black"
+    ],
+    "collections": "Weekend Vibes",
+    "material": "Denim",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1531966668630-d7a99b27f590?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing a white fashion blouse"
+      }
+    ],
+    "rating": 4.0,
+    "numReviews": 35
   },
   {
-    name: "Oversized Graphic T-Shirt",
-    description:
-      "An oversized graphic t-shirt that combines comfort with street style. Featuring bold prints across the chest, this relaxed fit tee offers a modern vibe, perfect for pairing with jeans or joggers.",
-    price: 19.99,
-    discountPrice: 15.99,
-    countInStock: 40,
-    sku: "OVS-GRF-007",
-    category: "Top Wear",
-    brand: "Street Vibes",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["Black", "Gray"],
-    collections: "Streetwear",
-    material: "Cotton",
-    gender: "Men",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=5",
-        altText: "Oversized Graphic T-Shirt Front View",
-      },
+    "name": "Metro Mode Top 7",
+    "description": "Polyester top wear item designed for women under the Summer Essentials line.",
+    "price": 39.99,
+    "discountPrice": 38.49,
+    "countInStock": 18,
+    "sku": "ME-007",
+    "category": "Top Wear",
+    "brand": "Metro Mode",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
-    rating: 4.6,
-    numReviews: 30,
+    "colors": [
+      "Black",
+      "Blue"
+    ],
+    "collections": "Summer Essentials",
+    "material": "Polyester",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583007971185-b7ef5a7a35d0?auto=format&fit=crop&w=500",
+        "altText": "Pair of slim-fit men's chinos"
+      }
+    ],
+    "rating": 4.1,
+    "numReviews": 42
   },
   {
-    name: "Regular-Fit Henley Shirt",
-    description:
-      "A modern take on the classic Henley shirt, this regular-fit style features a buttoned placket and ribbed cuffs. Made from a soft cotton blend with a touch of elastane for stretch.",
-    price: 22.99,
-    discountPrice: 18.99,
-    countInStock: 35,
-    sku: "REG-HEN-008",
-    category: "Top Wear",
-    brand: "Heritage Wear",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["Heather Gray", "Olive", "Black"],
-    collections: "Casual Wear",
-    material: "Cotton Blend",
-    gender: "Men",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=6",
-        altText: "Regular-Fit Henley Shirt Front View",
-      },
+    "name": "Style Hub Bottom 8",
+    "description": "Linen Blend bottom wear item designed for women under the Formal Attire line.",
+    "price": 49.99,
+    "discountPrice": 46.99,
+    "countInStock": 21,
+    "sku": "ST-008",
+    "category": "Bottom Wear",
+    "brand": "Style Hub",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
-    rating: 4.5,
-    numReviews: 25,
+    "colors": [
+      "Blue",
+      "White"
+    ],
+    "collections": "Formal Attire",
+    "material": "Linen Blend",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585386959984-a415522c12f0?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing flowy palazzo pants"
+      }
+    ],
+    "rating": 4.2,
+    "numReviews": 49
   },
   {
-    name: "Long-Sleeve Thermal Tee",
-    description:
-      "Stay warm with this long-sleeve thermal tee, made from soft cotton with a waffle-knit texture. Ideal for layering in cooler months, the slim-fit design ensures a snug yet comfortable fit.",
-    price: 27.99,
-    discountPrice: 22.99,
-    countInStock: 20,
-    sku: "LST-THR-009",
-    category: "Top Wear",
-    brand: "Winter Basics",
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    colors: ["Charcoal", "Dark Green", "Navy"],
-    collections: "Winter Essentials",
-    material: "Cotton",
-    gender: "Men",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=7",
-        altText: "Long-Sleeve Thermal Tee Front View",
-      },
+    "name": "Bold Edge Top 9",
+    "description": "Cotton top wear item designed for men under the Business Casual line.",
+    "price": 59.99,
+    "discountPrice": 55.49,
+    "countInStock": 24,
+    "sku": "BO-009",
+    "category": "Top Wear",
+    "brand": "Bold Edge",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
     ],
-    rating: 4.4,
-    numReviews: 18,
+    "colors": [
+      "White",
+      "Beige"
+    ],
+    "collections": "Business Casual",
+    "material": "Cotton",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560464024-54e05c1cb0fe?auto=format&fit=crop&w=500",
+        "altText": "Man wearing a blue button-down Oxford shirt"
+      }
+    ],
+    "rating": 4.3,
+    "numReviews": 56
   },
   {
-    name: "V-Neck Classic T-Shirt",
-    description:
-      "A classic V-neck t-shirt for everyday wear. This regular-fit tee is made from breathable cotton and features a clean, simple design with a flattering V-neckline. Lightweight fabric and soft texture make it perfect for casual looks.",
-    price: 14.99,
-    discountPrice: 11.99,
-    countInStock: 60,
-    sku: "VNECK-CLS-010",
-    category: "Top Wear",
-    brand: "Everyday Comfort",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["White", "Black", "Navy"],
-    collections: "Basics",
-    material: "Cotton",
-    gender: "Men",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=8",
-        altText: "V-Neck Classic T-Shirt Front View",
-      },
+    "name": "Elegance Wear Bottom 10",
+    "description": "Denim bottom wear item designed for men under the Weekend Vibes line.",
+    "price": 69.99,
+    "discountPrice": 63.99,
+    "countInStock": 27,
+    "sku": "EL-010",
+    "category": "Bottom Wear",
+    "brand": "Elegance Wear",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
     ],
-    rating: 4.7,
-    numReviews: 28,
+    "colors": [
+      "Beige",
+      "Gray"
+    ],
+    "collections": "Weekend Vibes",
+    "material": "Denim",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1531966668630-d7a99b27f590?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing a white fashion blouse"
+      }
+    ],
+    "rating": 4.4,
+    "numReviews": 63
   },
   {
-    name: "Slim Fit Joggers",
-    description:
-      "Slim-fit joggers with an elasticated drawstring waist. Features ribbed hems and side pockets. Ideal for casual outings or workouts.",
-    price: 40,
-    discountPrice: 35,
-    countInStock: 20,
-    sku: "BW-001",
-    category: "Bottom Wear",
-    brand: "ActiveWear",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["Black", "Gray", "Navy"],
-    collections: "Casual Collection",
-    material: "Cotton Blend",
-    gender: "Men",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=9",
-        altText: "Slim Fit Joggers Front View",
-      },
+    "name": "Urban Threads Top 11",
+    "description": "Polyester top wear item designed for women under the Summer Essentials line.",
+    "price": 29.99,
+    "discountPrice": 29.99,
+    "countInStock": 30,
+    "sku": "UR-011",
+    "category": "Top Wear",
+    "brand": "Urban Threads",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
-    rating: 4.5,
-    numReviews: 12,
+    "colors": [
+      "Gray",
+      "Red"
+    ],
+    "collections": "Summer Essentials",
+    "material": "Polyester",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583007971185-b7ef5a7a35d0?auto=format&fit=crop&w=500",
+        "altText": "Pair of slim-fit men's chinos"
+      }
+    ],
+    "rating": 3.5,
+    "numReviews": 70
   },
   {
-    name: "Cargo Joggers",
-    description:
-      "Relaxed-fit cargo joggers featuring multiple pockets for functionality. Drawstring waist and cuffed hems for a modern look.",
-    price: 45,
-    discountPrice: 40,
-    countInStock: 15,
-    sku: "BW-002",
-    category: "Bottom Wear",
-    brand: "UrbanStyle",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["Olive", "Black"],
-    collections: "Urban Collection",
-    material: "Cotton",
-    gender: "Men",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=10",
-        altText: "Cargo Joggers Front View",
-      },
+    "name": "Metro Mode Bottom 12",
+    "description": "Linen Blend bottom wear item designed for women under the Formal Attire line.",
+    "price": 39.99,
+    "discountPrice": 38.49,
+    "countInStock": 33,
+    "sku": "ME-012",
+    "category": "Bottom Wear",
+    "brand": "Metro Mode",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
-    rating: 4.7,
-    numReviews: 20,
+    "colors": [
+      "Red",
+      "Black"
+    ],
+    "collections": "Formal Attire",
+    "material": "Linen Blend",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585386959984-a415522c12f0?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing flowy palazzo pants"
+      }
+    ],
+    "rating": 3.6,
+    "numReviews": 77
   },
   {
-    name: "Tapered Sweatpants",
-    description:
-      "Tapered sweatpants designed for comfort. Elastic waistband with adjustable drawstring, perfect for lounging or athletic activities.",
-    price: 35,
-    discountPrice: 30,
-    countInStock: 25,
-    sku: "BW-003",
-    category: "Bottom Wear",
-    brand: "ChillZone",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["Gray", "Charcoal", "Blue"],
-    collections: "Lounge Collection",
-    material: "Fleece",
-    gender: "Men",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=11",
-        altText: "Tapered Sweatpants Front View",
-      },
+    "name": "Style Hub Top 13",
+    "description": "Cotton top wear item designed for men under the Business Casual line.",
+    "price": 49.99,
+    "discountPrice": 46.99,
+    "countInStock": 36,
+    "sku": "ST-013",
+    "category": "Top Wear",
+    "brand": "Style Hub",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
     ],
-    rating: 4.3,
-    numReviews: 18,
+    "colors": [
+      "Black",
+      "Blue"
+    ],
+    "collections": "Business Casual",
+    "material": "Cotton",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560464024-54e05c1cb0fe?auto=format&fit=crop&w=500",
+        "altText": "Man wearing a blue button-down Oxford shirt"
+      }
+    ],
+    "rating": 3.7,
+    "numReviews": 84
   },
   {
-    name: "Denim Jeans",
-    description:
-      "Classic slim-fit denim jeans with a slight stretch for comfort. Features a zip fly and five-pocket styling for a timeless look.",
-    price: 60,
-    discountPrice: 50,
-    countInStock: 30,
-    sku: "BW-004",
-    category: "Bottom Wear",
-    brand: "DenimCo",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["Dark Blue", "Light Blue"],
-    collections: "Denim Collection",
-    material: "Denim",
-    gender: "Men",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=12",
-        altText: "Denim Jeans Front View",
-      },
+    "name": "Bold Edge Bottom 14",
+    "description": "Denim bottom wear item designed for men under the Weekend Vibes line.",
+    "price": 59.99,
+    "discountPrice": 55.49,
+    "countInStock": 39,
+    "sku": "BO-014",
+    "category": "Bottom Wear",
+    "brand": "Bold Edge",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
     ],
-    rating: 4.6,
-    numReviews: 22,
+    "colors": [
+      "Blue",
+      "White"
+    ],
+    "collections": "Weekend Vibes",
+    "material": "Denim",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1531966668630-d7a99b27f590?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing a white fashion blouse"
+      }
+    ],
+    "rating": 3.8,
+    "numReviews": 91
   },
   {
-    name: "Chino Pants",
-    description:
-      "Slim-fit chino pants made from stretch cotton twill. Features a button closure and front and back pockets. Ideal for both casual and semi-formal wear.",
-    price: 55,
-    discountPrice: 48,
-    countInStock: 40,
-    sku: "BW-005",
-    category: "Bottom Wear",
-    brand: "CasualLook",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["Beige", "Navy", "Black"],
-    collections: "Smart Casual Collection",
-    material: "Cotton",
-    gender: "Men",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=13",
-        altText: "Chino Pants Front View",
-      },
+    "name": "Elegance Wear Top 15",
+    "description": "Polyester top wear item designed for women under the Summer Essentials line.",
+    "price": 69.99,
+    "discountPrice": 63.99,
+    "countInStock": 42,
+    "sku": "EL-015",
+    "category": "Top Wear",
+    "brand": "Elegance Wear",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
-    rating: 4.8,
-    numReviews: 15,
+    "colors": [
+      "White",
+      "Beige"
+    ],
+    "collections": "Summer Essentials",
+    "material": "Polyester",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583007971185-b7ef5a7a35d0?auto=format&fit=crop&w=500",
+        "altText": "Pair of slim-fit men's chinos"
+      }
+    ],
+    "rating": 3.9,
+    "numReviews": 98
   },
   {
-    name: "Track Pants",
-    description:
-      "Comfortable track pants with an elasticated waistband and tapered leg. Features side stripes for a sporty look. Ideal for athletic and casual wear.",
-    price: 40,
-    discountPrice: 35,
-    countInStock: 20,
-    sku: "BW-006",
-    category: "Bottom Wear",
-    brand: "SportX",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["Black", "Red", "Blue"],
-    collections: "Activewear Collection",
-    material: "Polyester",
-    gender: "Men",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=14",
-        altText: "Track Pants Front View",
-      },
+    "name": "Urban Threads Bottom 16",
+    "description": "Linen Blend bottom wear item designed for women under the Formal Attire line.",
+    "price": 29.99,
+    "discountPrice": 29.99,
+    "countInStock": 45,
+    "sku": "UR-016",
+    "category": "Bottom Wear",
+    "brand": "Urban Threads",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
-    rating: 4.2,
-    numReviews: 17,
+    "colors": [
+      "Beige",
+      "Gray"
+    ],
+    "collections": "Formal Attire",
+    "material": "Linen Blend",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585386959984-a415522c12f0?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing flowy palazzo pants"
+      }
+    ],
+    "rating": 4.0,
+    "numReviews": 5
   },
   {
-    name: "Slim Fit Trousers",
-    description:
-      "Tailored slim-fit trousers with belt loops and a hook-and-eye closure. Suitable for formal occasions or smart-casual wear.",
-    price: 65,
-    discountPrice: 55,
-    countInStock: 15,
-    sku: "BW-007",
-    category: "Bottom Wear",
-    brand: "ExecutiveStyle",
-    sizes: ["M", "L", "XL"],
-    colors: ["Gray", "Black"],
-    collections: "Office Wear",
-    material: "Polyester",
-    gender: "Men",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=15",
-        altText: "Slim Fit Trousers Front View",
-      },
+    "name": "Metro Mode Top 17",
+    "description": "Cotton top wear item designed for men under the Business Casual line.",
+    "price": 39.99,
+    "discountPrice": 38.49,
+    "countInStock": 48,
+    "sku": "ME-017",
+    "category": "Top Wear",
+    "brand": "Metro Mode",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
     ],
-    rating: 4.7,
-    numReviews: 10,
+    "colors": [
+      "Gray",
+      "Red"
+    ],
+    "collections": "Business Casual",
+    "material": "Cotton",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560464024-54e05c1cb0fe?auto=format&fit=crop&w=500",
+        "altText": "Man wearing a blue button-down Oxford shirt"
+      }
+    ],
+    "rating": 4.1,
+    "numReviews": 12
   },
   {
-    name: "Cargo Pants",
-    description:
-      "Loose-fit cargo pants with multiple utility pockets. Features adjustable ankle cuffs and a drawstring waist for versatility and comfort.",
-    price: 50,
-    discountPrice: 45,
-    countInStock: 25,
-    sku: "BW-008",
-    category: "Bottom Wear",
-    brand: "StreetWear",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["Olive", "Brown", "Black"],
-    collections: "Street Style Collection",
-    material: "Cotton",
-    gender: "Men",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=16",
-        altText: "Cargo Pants Front View",
-      },
+    "name": "Style Hub Bottom 18",
+    "description": "Denim bottom wear item designed for men under the Weekend Vibes line.",
+    "price": 49.99,
+    "discountPrice": 46.99,
+    "countInStock": 1,
+    "sku": "ST-018",
+    "category": "Bottom Wear",
+    "brand": "Style Hub",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
     ],
-    rating: 4.5,
-    numReviews: 13,
+    "colors": [
+      "Red",
+      "Black"
+    ],
+    "collections": "Weekend Vibes",
+    "material": "Denim",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1531966668630-d7a99b27f590?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing a white fashion blouse"
+      }
+    ],
+    "rating": 4.2,
+    "numReviews": 19
   },
   {
-    name: "Relaxed Fit Sweatpants",
-    description:
-      "Relaxed-fit sweatpants made from soft fleece fabric. Features an elastic waist and adjustable drawstring for a custom fit.",
-    price: 35,
-    discountPrice: 30,
-    countInStock: 35,
-    sku: "BW-009",
-    category: "Bottom Wear",
-    brand: "LoungeWear",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["Gray", "Black", "Navy"],
-    collections: "Lounge Collection",
-    material: "Fleece",
-    gender: "Men",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=17",
-        altText: "Relaxed Fit Sweatpants Front View",
-      },
+    "name": "Bold Edge Top 19",
+    "description": "Polyester top wear item designed for women under the Summer Essentials line.",
+    "price": 59.99,
+    "discountPrice": 55.49,
+    "countInStock": 4,
+    "sku": "BO-019",
+    "category": "Top Wear",
+    "brand": "Bold Edge",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
-    rating: 4.3,
-    numReviews: 14,
+    "colors": [
+      "Black",
+      "Blue"
+    ],
+    "collections": "Summer Essentials",
+    "material": "Polyester",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583007971185-b7ef5a7a35d0?auto=format&fit=crop&w=500",
+        "altText": "Pair of slim-fit men's chinos"
+      }
+    ],
+    "rating": 4.3,
+    "numReviews": 26
   },
   {
-    name: "Formal Dress Pants",
-    description:
-      "Classic formal dress pants with a slim fit. Made from lightweight, wrinkle-resistant fabric for a polished look at the office or formal events.",
-    price: 70,
-    discountPrice: 60,
-    countInStock: 20,
-    sku: "BW-010",
-    category: "Bottom Wear",
-    brand: "ElegantStyle",
-    sizes: ["M", "L", "XL"],
-    colors: ["Black", "Navy"],
-    collections: "Formal Collection",
-    material: "Polyester",
-    gender: "Men",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=18",
-        altText: "Formal Dress Pants Front View",
-      },
+    "name": "Elegance Wear Bottom 20",
+    "description": "Linen Blend bottom wear item designed for women under the Formal Attire line.",
+    "price": 69.99,
+    "discountPrice": 63.99,
+    "countInStock": 7,
+    "sku": "EL-020",
+    "category": "Bottom Wear",
+    "brand": "Elegance Wear",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
-    rating: 4.9,
-    numReviews: 8,
+    "colors": [
+      "Blue",
+      "White"
+    ],
+    "collections": "Formal Attire",
+    "material": "Linen Blend",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585386959984-a415522c12f0?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing flowy palazzo pants"
+      }
+    ],
+    "rating": 4.4,
+    "numReviews": 33
   },
   {
-    name: "High-Waist Skinny Jeans",
-    description:
-      "High-waist skinny jeans in stretch denim with a button and zip fly. Features a flattering fit that hugs your curves and enhances your silhouette.",
-    price: 50,
-    discountPrice: 45,
-    countInStock: 30,
-    sku: "BW-W-001",
-    category: "Bottom Wear",
-    brand: "DenimStyle",
-    sizes: ["XS", "S", "M", "L", "XL"],
-    colors: ["Dark Blue", "Black", "Light Blue"],
-    collections: "Denim Collection",
-    material: "Denim",
-    gender: "Women",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=19",
-        altText: "High-Waist Skinny Jeans",
-      },
+    "name": "Urban Threads Top 21",
+    "description": "Cotton top wear item designed for men under the Business Casual line.",
+    "price": 29.99,
+    "discountPrice": 29.99,
+    "countInStock": 10,
+    "sku": "UR-021",
+    "category": "Top Wear",
+    "brand": "Urban Threads",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
     ],
-    rating: 4.8,
-    numReviews: 20,
+    "colors": [
+      "White",
+      "Beige"
+    ],
+    "collections": "Business Casual",
+    "material": "Cotton",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560464024-54e05c1cb0fe?auto=format&fit=crop&w=500",
+        "altText": "Man wearing a blue button-down Oxford shirt"
+      }
+    ],
+    "rating": 3.5,
+    "numReviews": 40
   },
   {
-    name: "Wide-Leg Trousers",
-    description:
-      "Flowy, wide-leg trousers with a high waist and side pockets. Perfect for an elegant look that combines comfort and style.",
-    price: 60,
-    discountPrice: 55,
-    countInStock: 25,
-    sku: "BW-W-002",
-    category: "Bottom Wear",
-    brand: "ElegantWear",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["Beige", "Black", "White"],
-    collections: "Formal Collection",
-    material: "Polyester",
-    gender: "Women",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=20",
-        altText: "Wide-Leg Trousers Front View",
-      },
+    "name": "Metro Mode Bottom 22",
+    "description": "Denim bottom wear item designed for men under the Weekend Vibes line.",
+    "price": 39.99,
+    "discountPrice": 38.49,
+    "countInStock": 13,
+    "sku": "ME-022",
+    "category": "Bottom Wear",
+    "brand": "Metro Mode",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
     ],
-    rating: 4.7,
-    numReviews: 15,
+    "colors": [
+      "Beige",
+      "Gray"
+    ],
+    "collections": "Weekend Vibes",
+    "material": "Denim",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1531966668630-d7a99b27f590?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing a white fashion blouse"
+      }
+    ],
+    "rating": 3.6,
+    "numReviews": 47
   },
   {
-    name: "Stretch Leggings",
-    description:
-      "Soft, stretch leggings in a high-rise style. Perfect for lounging, working out, or casual wear, with a smooth fit that flatters your body.",
-    price: 25,
-    discountPrice: 20,
-    countInStock: 40,
-    sku: "BW-W-003",
-    category: "Bottom Wear",
-    brand: "ComfyFit",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["Black", "Gray", "Navy"],
-    collections: "Activewear Collection",
-    material: "Cotton Blend",
-    gender: "Women",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=21",
-        altText: "Stretch Leggings Front View",
-      },
+    "name": "Style Hub Top 23",
+    "description": "Polyester top wear item designed for women under the Summer Essentials line.",
+    "price": 49.99,
+    "discountPrice": 46.99,
+    "countInStock": 16,
+    "sku": "ST-023",
+    "category": "Top Wear",
+    "brand": "Style Hub",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
-    rating: 4.5,
-    numReviews: 30,
+    "colors": [
+      "Gray",
+      "Red"
+    ],
+    "collections": "Summer Essentials",
+    "material": "Polyester",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583007971185-b7ef5a7a35d0?auto=format&fit=crop&w=500",
+        "altText": "Pair of slim-fit men's chinos"
+      }
+    ],
+    "rating": 3.7,
+    "numReviews": 54
   },
   {
-    name: "Pleated Midi Skirt",
-    description:
-      "Elegant pleated midi skirt with a high waistband and soft fabric that drapes beautifully. Ideal for both formal and casual occasions.",
-    price: 55,
-    discountPrice: 50,
-    countInStock: 20,
-    sku: "BW-W-004",
-    category: "Bottom Wear",
-    brand: "ChicStyle",
-    sizes: ["S", "M", "L"],
-    colors: ["Pink", "Navy", "Black"],
-    collections: "Spring Collection",
-    material: "Polyester",
-    gender: "Women",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=22",
-        altText: "Pleated Midi Skirt Front View",
-      },
+    "name": "Bold Edge Bottom 24",
+    "description": "Linen Blend bottom wear item designed for women under the Formal Attire line.",
+    "price": 59.99,
+    "discountPrice": 55.49,
+    "countInStock": 19,
+    "sku": "BO-024",
+    "category": "Bottom Wear",
+    "brand": "Bold Edge",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
-    rating: 4.6,
-    numReviews: 18,
+    "colors": [
+      "Red",
+      "Black"
+    ],
+    "collections": "Formal Attire",
+    "material": "Linen Blend",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585386959984-a415522c12f0?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing flowy palazzo pants"
+      }
+    ],
+    "rating": 3.8,
+    "numReviews": 61
   },
   {
-    name: "Flared Palazzo Pants",
-    description:
-      "High-waist palazzo pants with a loose, flowing fit. Comfortable and stylish, making them perfect for casual outings or beach days.",
-    price: 45,
-    discountPrice: 40,
-    countInStock: 35,
-    sku: "BW-W-005",
-    category: "Bottom Wear",
-    brand: "BreezyVibes",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["White", "Beige", "Light Blue"],
-    collections: "Summer Collection",
-    material: "Linen Blend",
-    gender: "Women",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=23",
-        altText: "Flared Palazzo Pants Front View",
-      },
+    "name": "Elegance Wear Top 25",
+    "description": "Cotton top wear item designed for men under the Business Casual line.",
+    "price": 69.99,
+    "discountPrice": 63.99,
+    "countInStock": 22,
+    "sku": "EL-025",
+    "category": "Top Wear",
+    "brand": "Elegance Wear",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
     ],
-    rating: 4.4,
-    numReviews: 22,
+    "colors": [
+      "Black",
+      "Blue"
+    ],
+    "collections": "Business Casual",
+    "material": "Cotton",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560464024-54e05c1cb0fe?auto=format&fit=crop&w=500",
+        "altText": "Man wearing a blue button-down Oxford shirt"
+      }
+    ],
+    "rating": 3.9,
+    "numReviews": 68
   },
   {
-    name: "High-Rise Joggers",
-    description:
-      "Comfortable high-rise joggers with an elastic waistband and drawstring for a perfect fit. Great for lounging or working out.",
-    price: 40,
-    discountPrice: 35,
-    countInStock: 30,
-    sku: "BW-W-006",
-    category: "Bottom Wear",
-    brand: "ActiveWear",
-    sizes: ["XS", "S", "M", "L"],
-    colors: ["Black", "Gray", "Pink"],
-    collections: "Loungewear Collection",
-    material: "Cotton Blend",
-    gender: "Women",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=24",
-        altText: "High-Rise Joggers Front View",
-      },
+    "name": "Urban Threads Bottom 26",
+    "description": "Denim bottom wear item designed for men under the Weekend Vibes line.",
+    "price": 29.99,
+    "discountPrice": 29.99,
+    "countInStock": 25,
+    "sku": "UR-026",
+    "category": "Bottom Wear",
+    "brand": "Urban Threads",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
     ],
-    rating: 4.3,
-    numReviews: 25,
+    "colors": [
+      "Blue",
+      "White"
+    ],
+    "collections": "Weekend Vibes",
+    "material": "Denim",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1531966668630-d7a99b27f590?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing a white fashion blouse"
+      }
+    ],
+    "rating": 4.0,
+    "numReviews": 75
   },
   {
-    name: "Paperbag Waist Shorts",
-    description:
-      "Stylish paperbag waist shorts with a belted waist and wide legs. Perfect for summer outings and keeping cool in style.",
-    price: 35,
-    discountPrice: 30,
-    countInStock: 20,
-    sku: "BW-W-007",
-    category: "Bottom Wear",
-    brand: "SunnyStyle",
-    sizes: ["S", "M", "L"],
-    colors: ["White", "Khaki", "Blue"],
-    collections: "Summer Collection",
-    material: "Cotton",
-    gender: "Women",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=25",
-        altText: "Paperbag Waist Shorts Front View",
-      },
+    "name": "Metro Mode Top 27",
+    "description": "Polyester top wear item designed for women under the Summer Essentials line.",
+    "price": 39.99,
+    "discountPrice": 38.49,
+    "countInStock": 28,
+    "sku": "ME-027",
+    "category": "Top Wear",
+    "brand": "Metro Mode",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
-    rating: 4.5,
-    numReviews: 19,
+    "colors": [
+      "White",
+      "Beige"
+    ],
+    "collections": "Summer Essentials",
+    "material": "Polyester",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583007971185-b7ef5a7a35d0?auto=format&fit=crop&w=500",
+        "altText": "Pair of slim-fit men's chinos"
+      }
+    ],
+    "rating": 4.1,
+    "numReviews": 82
   },
   {
-    name: "Stretch Denim Shorts",
-    description:
-      "Comfortable stretch denim shorts with a high-waisted fit and raw hem. Perfect for pairing with your favorite tops during warmer months.",
-    price: 40,
-    discountPrice: 35,
-    countInStock: 25,
-    sku: "BW-W-008",
-    category: "Bottom Wear",
-    brand: "DenimStyle",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["Blue", "Black", "White"],
-    collections: "Denim Collection",
-    material: "Denim",
-    gender: "Women",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=26",
-        altText: "Stretch Denim Shorts Front View",
-      },
+    "name": "Style Hub Bottom 28",
+    "description": "Linen Blend bottom wear item designed for women under the Formal Attire line.",
+    "price": 49.99,
+    "discountPrice": 46.99,
+    "countInStock": 31,
+    "sku": "ST-028",
+    "category": "Bottom Wear",
+    "brand": "Style Hub",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
-    rating: 4.7,
-    numReviews: 15,
+    "colors": [
+      "Beige",
+      "Gray"
+    ],
+    "collections": "Formal Attire",
+    "material": "Linen Blend",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585386959984-a415522c12f0?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing flowy palazzo pants"
+      }
+    ],
+    "rating": 4.2,
+    "numReviews": 89
   },
   {
-    name: "Culottes",
-    description:
-      "Wide-leg culottes with a flattering high waist and cropped length. The perfect blend of comfort and style for any casual occasion.",
-    price: 50,
-    discountPrice: 45,
-    countInStock: 30,
-    sku: "BW-W-009",
-    category: "Bottom Wear",
-    brand: "ChicStyle",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["Black", "White", "Olive"],
-    collections: "Casual Collection",
-    material: "Polyester",
-    gender: "Women",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=27",
-        altText: "Culottes Front View",
-      },
+    "name": "Bold Edge Top 29",
+    "description": "Cotton top wear item designed for men under the Business Casual line.",
+    "price": 59.99,
+    "discountPrice": 55.49,
+    "countInStock": 34,
+    "sku": "BO-029",
+    "category": "Top Wear",
+    "brand": "Bold Edge",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
     ],
-    rating: 4.6,
-    numReviews: 23,
+    "colors": [
+      "Gray",
+      "Red"
+    ],
+    "collections": "Business Casual",
+    "material": "Cotton",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560464024-54e05c1cb0fe?auto=format&fit=crop&w=500",
+        "altText": "Man wearing a blue button-down Oxford shirt"
+      }
+    ],
+    "rating": 4.3,
+    "numReviews": 96
   },
   {
-    name: "Classic Pleated Trousers",
-    description:
-      "Timeless pleated trousers with a tailored fit. A wardrobe essential for workwear or formal occasions.",
-    price: 70,
-    discountPrice: 65,
-    countInStock: 25,
-    sku: "BW-W-010",
-    category: "Bottom Wear",
-    brand: "ElegantWear",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["Navy", "Black", "Gray"],
-    collections: "Formal Collection",
-    material: "Wool Blend",
-    gender: "Women",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=28",
-        altText: "Classic Pleated Trousers Front View",
-      },
+    "name": "Elegance Wear Bottom 30",
+    "description": "Denim bottom wear item designed for men under the Weekend Vibes line.",
+    "price": 69.99,
+    "discountPrice": 63.99,
+    "countInStock": 37,
+    "sku": "EL-030",
+    "category": "Bottom Wear",
+    "brand": "Elegance Wear",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
     ],
-    rating: 4.8,
-    numReviews: 20,
+    "colors": [
+      "Red",
+      "Black"
+    ],
+    "collections": "Weekend Vibes",
+    "material": "Denim",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1531966668630-d7a99b27f590?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing a white fashion blouse"
+      }
+    ],
+    "rating": 4.4,
+    "numReviews": 3
   },
   {
-    name: "Knitted Cropped Top",
-    description:
-      "A stylish knitted cropped top with a flattering fitted silhouette. Perfect for pairing with high-waisted jeans or skirts for a casual look.",
-    price: 40,
-    discountPrice: 35,
-    countInStock: 25,
-    sku: "TW-W-001",
-    category: "Top Wear",
-    brand: "ChicKnit",
-    sizes: ["S", "M", "L"],
-    colors: ["Beige", "White"],
-    collections: "Knits Collection",
-    material: "Cotton Blend",
-    gender: "Women",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=29",
-        altText: "Knitted Cropped Top",
-      },
+    "name": "Urban Threads Top 31",
+    "description": "Polyester top wear item designed for women under the Summer Essentials line.",
+    "price": 29.99,
+    "discountPrice": 29.99,
+    "countInStock": 40,
+    "sku": "UR-031",
+    "category": "Top Wear",
+    "brand": "Urban Threads",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
-    rating: 4.6,
-    numReviews: 15,
+    "colors": [
+      "Black",
+      "Blue"
+    ],
+    "collections": "Summer Essentials",
+    "material": "Polyester",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583007971185-b7ef5a7a35d0?auto=format&fit=crop&w=500",
+        "altText": "Pair of slim-fit men's chinos"
+      }
+    ],
+    "rating": 3.5,
+    "numReviews": 10
   },
   {
-    name: "Boho Floral Blouse",
-    description:
-      "Flowy boho blouse with floral patterns, featuring a relaxed fit and balloon sleeves. Ideal for casual summer days.",
-    price: 50,
-    discountPrice: 45,
-    countInStock: 30,
-    sku: "TW-W-002",
-    category: "Top Wear",
-    brand: "BohoVibes",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["White", "Pink"],
-    collections: "Summer Collection",
-    material: "Viscose",
-    gender: "Women",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=30",
-        altText: "Boho Floral Blouse",
-      },
+    "name": "Metro Mode Bottom 32",
+    "description": "Linen Blend bottom wear item designed for women under the Formal Attire line.",
+    "price": 39.99,
+    "discountPrice": 38.49,
+    "countInStock": 43,
+    "sku": "ME-032",
+    "category": "Bottom Wear",
+    "brand": "Metro Mode",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
-    rating: 4.7,
-    numReviews: 20,
+    "colors": [
+      "Blue",
+      "White"
+    ],
+    "collections": "Formal Attire",
+    "material": "Linen Blend",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585386959984-a415522c12f0?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing flowy palazzo pants"
+      }
+    ],
+    "rating": 3.6,
+    "numReviews": 17
   },
   {
-    name: "Casual T-Shirt",
-    description:
-      "A soft, breathable casual t-shirt with a classic fit. Features a round neckline and short sleeves, perfect for everyday wear.",
-    price: 25,
-    discountPrice: 20,
-    countInStock: 50,
-    sku: "TW-W-003",
-    category: "Top Wear",
-    brand: "ComfyTees",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["Black", "White", "Gray"],
-    collections: "Essentials",
-    material: "Cotton",
-    gender: "Women",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=31",
-        altText: "Casual T-Shirt",
-      },
+    "name": "Style Hub Top 33",
+    "description": "Cotton top wear item designed for men under the Business Casual line.",
+    "price": 49.99,
+    "discountPrice": 46.99,
+    "countInStock": 46,
+    "sku": "ST-033",
+    "category": "Top Wear",
+    "brand": "Style Hub",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
     ],
-    rating: 4.5,
-    numReviews: 25,
+    "colors": [
+      "White",
+      "Beige"
+    ],
+    "collections": "Business Casual",
+    "material": "Cotton",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560464024-54e05c1cb0fe?auto=format&fit=crop&w=500",
+        "altText": "Man wearing a blue button-down Oxford shirt"
+      }
+    ],
+    "rating": 3.7,
+    "numReviews": 24
   },
   {
-    name: "Off-Shoulder Top",
-    description:
-      "An elegant off-shoulder top with ruffled sleeves and a flattering fit. Ideal for adding a touch of femininity to your outfit.",
-    price: 45,
-    discountPrice: 40,
-    countInStock: 35,
-    sku: "TW-W-004",
-    category: "Top Wear",
-    brand: "Elegance",
-    sizes: ["S", "M", "L"],
-    colors: ["Red", "White", "Blue"],
-    collections: "Evening Collection",
-    material: "Polyester",
-    gender: "Women",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=32",
-        altText: "Off-Shoulder Top",
-      },
+    "name": "Bold Edge Bottom 34",
+    "description": "Denim bottom wear item designed for men under the Weekend Vibes line.",
+    "price": 59.99,
+    "discountPrice": 55.49,
+    "countInStock": 49,
+    "sku": "BO-034",
+    "category": "Bottom Wear",
+    "brand": "Bold Edge",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
     ],
-    rating: 4.7,
-    numReviews: 18,
+    "colors": [
+      "Beige",
+      "Gray"
+    ],
+    "collections": "Weekend Vibes",
+    "material": "Denim",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1531966668630-d7a99b27f590?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing a white fashion blouse"
+      }
+    ],
+    "rating": 3.8,
+    "numReviews": 31
   },
   {
-    name: "Lace-Trimmed Cami Top",
-    description:
-      "A delicate cami top with lace trim and adjustable straps. The lightweight fabric makes it perfect for layering or wearing alone during warmer weather.",
-    price: 35,
-    discountPrice: 30,
-    countInStock: 40,
-    sku: "TW-W-005",
-    category: "Top Wear",
-    brand: "DelicateWear",
-    sizes: ["S", "M", "L"],
-    colors: ["Black", "White"],
-    collections: "Lingerie-Inspired",
-    material: "Silk Blend",
-    gender: "Women",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=33",
-        altText: "Lace-Trimmed Cami Top",
-      },
+    "name": "Elegance Wear Top 35",
+    "description": "Polyester top wear item designed for women under the Summer Essentials line.",
+    "price": 69.99,
+    "discountPrice": 63.99,
+    "countInStock": 2,
+    "sku": "EL-035",
+    "category": "Top Wear",
+    "brand": "Elegance Wear",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
-    rating: 4.8,
-    numReviews: 22,
+    "colors": [
+      "Gray",
+      "Red"
+    ],
+    "collections": "Summer Essentials",
+    "material": "Polyester",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583007971185-b7ef5a7a35d0?auto=format&fit=crop&w=500",
+        "altText": "Pair of slim-fit men's chinos"
+      }
+    ],
+    "rating": 3.9,
+    "numReviews": 38
   },
   {
-    name: "Graphic Print Tee",
-    description:
-      "A trendy graphic print tee with a relaxed fit. Pair it with jeans or skirts for a cool and casual look.",
-    price: 30,
-    discountPrice: 25,
-    countInStock: 45,
-    sku: "TW-W-006",
-    category: "Top Wear",
-    brand: "StreetStyle",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["White", "Black"],
-    collections: "Urban Collection",
-    material: "Cotton",
-    gender: "Women",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=34",
-        altText: "Graphic Print Tee",
-      },
+    "name": "Urban Threads Bottom 36",
+    "description": "Linen Blend bottom wear item designed for women under the Formal Attire line.",
+    "price": 29.99,
+    "discountPrice": 29.99,
+    "countInStock": 5,
+    "sku": "UR-036",
+    "category": "Bottom Wear",
+    "brand": "Urban Threads",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
-    rating: 4.6,
-    numReviews: 30,
+    "colors": [
+      "Red",
+      "Black"
+    ],
+    "collections": "Formal Attire",
+    "material": "Linen Blend",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585386959984-a415522c12f0?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing flowy palazzo pants"
+      }
+    ],
+    "rating": 4.0,
+    "numReviews": 45
   },
   {
-    name: "Ribbed Long-Sleeve Top",
-    description:
-      "A cozy ribbed long-sleeve top that offers comfort and style. Perfect for layering during cooler months.",
-    price: 55,
-    discountPrice: 50,
-    countInStock: 30,
-    sku: "TW-W-007",
-    category: "Top Wear",
-    brand: "ComfortFit",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["Gray", "Pink", "Brown"],
-    collections: "Fall Collection",
-    material: "Cotton Blend",
-    gender: "Women",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=35",
-        altText: "Ribbed Long-Sleeve Top",
-      },
+    "name": "Metro Mode Top 37",
+    "description": "Cotton top wear item designed for men under the Business Casual line.",
+    "price": 39.99,
+    "discountPrice": 38.49,
+    "countInStock": 8,
+    "sku": "ME-037",
+    "category": "Top Wear",
+    "brand": "Metro Mode",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
     ],
-    rating: 4.7,
-    numReviews: 26,
+    "colors": [
+      "Black",
+      "Blue"
+    ],
+    "collections": "Business Casual",
+    "material": "Cotton",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560464024-54e05c1cb0fe?auto=format&fit=crop&w=500",
+        "altText": "Man wearing a blue button-down Oxford shirt"
+      }
+    ],
+    "rating": 4.1,
+    "numReviews": 52
   },
   {
-    name: "Ruffle-Sleeve Blouse",
-    description:
-      "A lightweight ruffle-sleeve blouse with a flattering fit. Perfect for a feminine touch to any outfit.",
-    price: 45,
-    discountPrice: 40,
-    countInStock: 20,
-    sku: "TW-W-008",
-    category: "Top Wear",
-    brand: "FeminineWear",
-    sizes: ["S", "M", "L"],
-    colors: ["White", "Navy", "Lavender"],
-    collections: "Summer Collection",
-    material: "Viscose",
-    gender: "Women",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=36",
-        altText: "Ruffle-Sleeve Blouse",
-      },
+    "name": "Style Hub Bottom 38",
+    "description": "Denim bottom wear item designed for men under the Weekend Vibes line.",
+    "price": 49.99,
+    "discountPrice": 46.99,
+    "countInStock": 11,
+    "sku": "ST-038",
+    "category": "Bottom Wear",
+    "brand": "Style Hub",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
     ],
-    rating: 4.5,
-    numReviews: 19,
+    "colors": [
+      "Blue",
+      "White"
+    ],
+    "collections": "Weekend Vibes",
+    "material": "Denim",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1531966668630-d7a99b27f590?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing a white fashion blouse"
+      }
+    ],
+    "rating": 4.2,
+    "numReviews": 59
   },
   {
-    name: "Classic Button-Up Shirt",
-    description:
-      "A versatile button-up shirt that can be dressed up or down. Made from soft fabric with a tailored fit, it's perfect for both casual and formal occasions.",
-    price: 60,
-    discountPrice: 55,
-    countInStock: 25,
-    sku: "TW-W-009",
-    category: "Top Wear",
-    brand: "ClassicStyle",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["White", "Light Blue", "Black"],
-    collections: "Office Collection",
-    material: "Cotton",
-    gender: "Women",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=37",
-        altText: "Classic Button-Up Shirt",
-      },
+    "name": "Bold Edge Top 39",
+    "description": "Polyester top wear item designed for women under the Summer Essentials line.",
+    "price": 59.99,
+    "discountPrice": 55.49,
+    "countInStock": 14,
+    "sku": "BO-039",
+    "category": "Top Wear",
+    "brand": "Bold Edge",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
-    rating: 4.8,
-    numReviews: 25,
+    "colors": [
+      "White",
+      "Beige"
+    ],
+    "collections": "Summer Essentials",
+    "material": "Polyester",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583007971185-b7ef5a7a35d0?auto=format&fit=crop&w=500",
+        "altText": "Pair of slim-fit men's chinos"
+      }
+    ],
+    "rating": 4.3,
+    "numReviews": 66
   },
   {
-    name: "V-Neck Wrap Top",
-    description:
-      "A chic v-neck wrap top with a tie waist. Its elegant style makes it perfect for both casual and semi-formal occasions.",
-    price: 50,
-    discountPrice: 45,
-    countInStock: 30,
-    sku: "TW-W-010",
-    category: "Top Wear",
-    brand: "ChicWrap",
-    sizes: ["S", "M", "L"],
-    colors: ["Red", "Black", "White"],
-    collections: "Evening Collection",
-    material: "Polyester",
-    gender: "Women",
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=38",
-        altText: "V-Neck Wrap Top",
-      },
+    "name": "Elegance Wear Bottom 40",
+    "description": "Linen Blend bottom wear item designed for women under the Formal Attire line.",
+    "price": 69.99,
+    "discountPrice": 63.99,
+    "countInStock": 17,
+    "sku": "EL-040",
+    "category": "Bottom Wear",
+    "brand": "Elegance Wear",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
-    rating: 4.7,
-    numReviews: 22,
+    "colors": [
+      "Beige",
+      "Gray"
+    ],
+    "collections": "Formal Attire",
+    "material": "Linen Blend",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585386959984-a415522c12f0?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing flowy palazzo pants"
+      }
+    ],
+    "rating": 4.4,
+    "numReviews": 73
   },
-];
+  {
+    "name": "Urban Threads Top 41",
+    "description": "Cotton top wear item designed for men under the Business Casual line.",
+    "price": 29.99,
+    "discountPrice": 29.99,
+    "countInStock": 20,
+    "sku": "UR-041",
+    "category": "Top Wear",
+    "brand": "Urban Threads",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Gray",
+      "Red"
+    ],
+    "collections": "Business Casual",
+    "material": "Cotton",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560464024-54e05c1cb0fe?auto=format&fit=crop&w=500",
+        "altText": "Man wearing a blue button-down Oxford shirt"
+      }
+    ],
+    "rating": 3.5,
+    "numReviews": 80
+  },
+  {
+    "name": "Metro Mode Bottom 42",
+    "description": "Denim bottom wear item designed for men under the Weekend Vibes line.",
+    "price": 39.99,
+    "discountPrice": 38.49,
+    "countInStock": 23,
+    "sku": "ME-042",
+    "category": "Bottom Wear",
+    "brand": "Metro Mode",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Red",
+      "Black"
+    ],
+    "collections": "Weekend Vibes",
+    "material": "Denim",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1531966668630-d7a99b27f590?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing a white fashion blouse"
+      }
+    ],
+    "rating": 3.6,
+    "numReviews": 87
+  },
+  {
+    "name": "Style Hub Top 43",
+    "description": "Polyester top wear item designed for women under the Summer Essentials line.",
+    "price": 49.99,
+    "discountPrice": 46.99,
+    "countInStock": 26,
+    "sku": "ST-043",
+    "category": "Top Wear",
+    "brand": "Style Hub",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Black",
+      "Blue"
+    ],
+    "collections": "Summer Essentials",
+    "material": "Polyester",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583007971185-b7ef5a7a35d0?auto=format&fit=crop&w=500",
+        "altText": "Pair of slim-fit men's chinos"
+      }
+    ],
+    "rating": 3.7,
+    "numReviews": 94
+  },
+  {
+    "name": "Bold Edge Bottom 44",
+    "description": "Linen Blend bottom wear item designed for women under the Formal Attire line.",
+    "price": 59.99,
+    "discountPrice": 55.49,
+    "countInStock": 29,
+    "sku": "BO-044",
+    "category": "Bottom Wear",
+    "brand": "Bold Edge",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Blue",
+      "White"
+    ],
+    "collections": "Formal Attire",
+    "material": "Linen Blend",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585386959984-a415522c12f0?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing flowy palazzo pants"
+      }
+    ],
+    "rating": 3.8,
+    "numReviews": 1
+  },
+  {
+    "name": "Elegance Wear Top 45",
+    "description": "Cotton top wear item designed for men under the Business Casual line.",
+    "price": 69.99,
+    "discountPrice": 63.99,
+    "countInStock": 32,
+    "sku": "EL-045",
+    "category": "Top Wear",
+    "brand": "Elegance Wear",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "White",
+      "Beige"
+    ],
+    "collections": "Business Casual",
+    "material": "Cotton",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560464024-54e05c1cb0fe?auto=format&fit=crop&w=500",
+        "altText": "Man wearing a blue button-down Oxford shirt"
+      }
+    ],
+    "rating": 3.9,
+    "numReviews": 8
+  },
+  {
+    "name": "Urban Threads Bottom 46",
+    "description": "Denim bottom wear item designed for men under the Weekend Vibes line.",
+    "price": 29.99,
+    "discountPrice": 29.99,
+    "countInStock": 35,
+    "sku": "UR-046",
+    "category": "Bottom Wear",
+    "brand": "Urban Threads",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Beige",
+      "Gray"
+    ],
+    "collections": "Weekend Vibes",
+    "material": "Denim",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1531966668630-d7a99b27f590?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing a white fashion blouse"
+      }
+    ],
+    "rating": 4.0,
+    "numReviews": 15
+  },
+  {
+    "name": "Metro Mode Top 47",
+    "description": "Polyester top wear item designed for women under the Summer Essentials line.",
+    "price": 39.99,
+    "discountPrice": 38.49,
+    "countInStock": 38,
+    "sku": "ME-047",
+    "category": "Top Wear",
+    "brand": "Metro Mode",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Gray",
+      "Red"
+    ],
+    "collections": "Summer Essentials",
+    "material": "Polyester",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583007971185-b7ef5a7a35d0?auto=format&fit=crop&w=500",
+        "altText": "Pair of slim-fit men's chinos"
+      }
+    ],
+    "rating": 4.1,
+    "numReviews": 22
+  },
+  {
+    "name": "Style Hub Bottom 48",
+    "description": "Linen Blend bottom wear item designed for women under the Formal Attire line.",
+    "price": 49.99,
+    "discountPrice": 46.99,
+    "countInStock": 41,
+    "sku": "ST-048",
+    "category": "Bottom Wear",
+    "brand": "Style Hub",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Red",
+      "Black"
+    ],
+    "collections": "Formal Attire",
+    "material": "Linen Blend",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585386959984-a415522c12f0?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing flowy palazzo pants"
+      }
+    ],
+    "rating": 4.2,
+    "numReviews": 29
+  },
+  {
+    "name": "Bold Edge Top 49",
+    "description": "Cotton top wear item designed for men under the Business Casual line.",
+    "price": 59.99,
+    "discountPrice": 55.49,
+    "countInStock": 44,
+    "sku": "BO-049",
+    "category": "Top Wear",
+    "brand": "Bold Edge",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Black",
+      "Blue"
+    ],
+    "collections": "Business Casual",
+    "material": "Cotton",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560464024-54e05c1cb0fe?auto=format&fit=crop&w=500",
+        "altText": "Man wearing a blue button-down Oxford shirt"
+      }
+    ],
+    "rating": 4.3,
+    "numReviews": 36
+  },
+  {
+    "name": "Elegance Wear Bottom 50",
+    "description": "Denim bottom wear item designed for men under the Weekend Vibes line.",
+    "price": 69.99,
+    "discountPrice": 63.99,
+    "countInStock": 47,
+    "sku": "EL-050",
+    "category": "Bottom Wear",
+    "brand": "Elegance Wear",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Blue",
+      "White"
+    ],
+    "collections": "Weekend Vibes",
+    "material": "Denim",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1531966668630-d7a99b27f590?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing a white fashion blouse"
+      }
+    ],
+    "rating": 4.4,
+    "numReviews": 43
+  },
+  {
+    "name": "Urban Threads Top 51",
+    "description": "Polyester top wear item designed for women under the Summer Essentials line.",
+    "price": 29.99,
+    "discountPrice": 29.99,
+    "countInStock": 0,
+    "sku": "UR-051",
+    "category": "Top Wear",
+    "brand": "Urban Threads",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "White",
+      "Beige"
+    ],
+    "collections": "Summer Essentials",
+    "material": "Polyester",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583007971185-b7ef5a7a35d0?auto=format&fit=crop&w=500",
+        "altText": "Pair of slim-fit men's chinos"
+      }
+    ],
+    "rating": 3.5,
+    "numReviews": 50
+  },
+  {
+    "name": "Metro Mode Bottom 52",
+    "description": "Linen Blend bottom wear item designed for women under the Formal Attire line.",
+    "price": 39.99,
+    "discountPrice": 38.49,
+    "countInStock": 3,
+    "sku": "ME-052",
+    "category": "Bottom Wear",
+    "brand": "Metro Mode",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Beige",
+      "Gray"
+    ],
+    "collections": "Formal Attire",
+    "material": "Linen Blend",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585386959984-a415522c12f0?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing flowy palazzo pants"
+      }
+    ],
+    "rating": 3.6,
+    "numReviews": 57
+  },
+  {
+    "name": "Style Hub Top 53",
+    "description": "Cotton top wear item designed for men under the Business Casual line.",
+    "price": 49.99,
+    "discountPrice": 46.99,
+    "countInStock": 6,
+    "sku": "ST-053",
+    "category": "Top Wear",
+    "brand": "Style Hub",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Gray",
+      "Red"
+    ],
+    "collections": "Business Casual",
+    "material": "Cotton",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560464024-54e05c1cb0fe?auto=format&fit=crop&w=500",
+        "altText": "Man wearing a blue button-down Oxford shirt"
+      }
+    ],
+    "rating": 3.7,
+    "numReviews": 64
+  },
+  {
+    "name": "Bold Edge Bottom 54",
+    "description": "Denim bottom wear item designed for men under the Weekend Vibes line.",
+    "price": 59.99,
+    "discountPrice": 55.49,
+    "countInStock": 9,
+    "sku": "BO-054",
+    "category": "Bottom Wear",
+    "brand": "Bold Edge",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Red",
+      "Black"
+    ],
+    "collections": "Weekend Vibes",
+    "material": "Denim",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1531966668630-d7a99b27f590?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing a white fashion blouse"
+      }
+    ],
+    "rating": 3.8,
+    "numReviews": 71
+  },
+  {
+    "name": "Elegance Wear Top 55",
+    "description": "Polyester top wear item designed for women under the Summer Essentials line.",
+    "price": 69.99,
+    "discountPrice": 63.99,
+    "countInStock": 12,
+    "sku": "EL-055",
+    "category": "Top Wear",
+    "brand": "Elegance Wear",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Black",
+      "Blue"
+    ],
+    "collections": "Summer Essentials",
+    "material": "Polyester",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583007971185-b7ef5a7a35d0?auto=format&fit=crop&w=500",
+        "altText": "Pair of slim-fit men's chinos"
+      }
+    ],
+    "rating": 3.9,
+    "numReviews": 78
+  },
+  {
+    "name": "Urban Threads Bottom 56",
+    "description": "Linen Blend bottom wear item designed for women under the Formal Attire line.",
+    "price": 29.99,
+    "discountPrice": 29.99,
+    "countInStock": 15,
+    "sku": "UR-056",
+    "category": "Bottom Wear",
+    "brand": "Urban Threads",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Blue",
+      "White"
+    ],
+    "collections": "Formal Attire",
+    "material": "Linen Blend",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585386959984-a415522c12f0?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing flowy palazzo pants"
+      }
+    ],
+    "rating": 4.0,
+    "numReviews": 85
+  },
+  {
+    "name": "Metro Mode Top 57",
+    "description": "Cotton top wear item designed for men under the Business Casual line.",
+    "price": 39.99,
+    "discountPrice": 38.49,
+    "countInStock": 18,
+    "sku": "ME-057",
+    "category": "Top Wear",
+    "brand": "Metro Mode",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "White",
+      "Beige"
+    ],
+    "collections": "Business Casual",
+    "material": "Cotton",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560464024-54e05c1cb0fe?auto=format&fit=crop&w=500",
+        "altText": "Man wearing a blue button-down Oxford shirt"
+      }
+    ],
+    "rating": 4.1,
+    "numReviews": 92
+  },
+  {
+    "name": "Style Hub Bottom 58",
+    "description": "Denim bottom wear item designed for men under the Weekend Vibes line.",
+    "price": 49.99,
+    "discountPrice": 46.99,
+    "countInStock": 21,
+    "sku": "ST-058",
+    "category": "Bottom Wear",
+    "brand": "Style Hub",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Beige",
+      "Gray"
+    ],
+    "collections": "Weekend Vibes",
+    "material": "Denim",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1531966668630-d7a99b27f590?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing a white fashion blouse"
+      }
+    ],
+    "rating": 4.2,
+    "numReviews": 99
+  },
+  {
+    "name": "Bold Edge Top 59",
+    "description": "Polyester top wear item designed for women under the Summer Essentials line.",
+    "price": 59.99,
+    "discountPrice": 55.49,
+    "countInStock": 24,
+    "sku": "BO-059",
+    "category": "Top Wear",
+    "brand": "Bold Edge",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Gray",
+      "Red"
+    ],
+    "collections": "Summer Essentials",
+    "material": "Polyester",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583007971185-b7ef5a7a35d0?auto=format&fit=crop&w=500",
+        "altText": "Pair of slim-fit men's chinos"
+      }
+    ],
+    "rating": 4.3,
+    "numReviews": 6
+  },
+  {
+    "name": "Elegance Wear Bottom 60",
+    "description": "Linen Blend bottom wear item designed for women under the Formal Attire line.",
+    "price": 69.99,
+    "discountPrice": 63.99,
+    "countInStock": 27,
+    "sku": "EL-060",
+    "category": "Bottom Wear",
+    "brand": "Elegance Wear",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Red",
+      "Black"
+    ],
+    "collections": "Formal Attire",
+    "material": "Linen Blend",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585386959984-a415522c12f0?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing flowy palazzo pants"
+      }
+    ],
+    "rating": 4.4,
+    "numReviews": 13
+  },
+  {
+    "name": "Urban Threads Top 61",
+    "description": "Cotton top wear item designed for men under the Business Casual line.",
+    "price": 29.99,
+    "discountPrice": 29.99,
+    "countInStock": 30,
+    "sku": "UR-061",
+    "category": "Top Wear",
+    "brand": "Urban Threads",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Black",
+      "Blue"
+    ],
+    "collections": "Business Casual",
+    "material": "Cotton",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560464024-54e05c1cb0fe?auto=format&fit=crop&w=500",
+        "altText": "Man wearing a blue button-down Oxford shirt"
+      }
+    ],
+    "rating": 3.5,
+    "numReviews": 20
+  },
+  {
+    "name": "Metro Mode Bottom 62",
+    "description": "Denim bottom wear item designed for men under the Weekend Vibes line.",
+    "price": 39.99,
+    "discountPrice": 38.49,
+    "countInStock": 33,
+    "sku": "ME-062",
+    "category": "Bottom Wear",
+    "brand": "Metro Mode",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Blue",
+      "White"
+    ],
+    "collections": "Weekend Vibes",
+    "material": "Denim",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1531966668630-d7a99b27f590?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing a white fashion blouse"
+      }
+    ],
+    "rating": 3.6,
+    "numReviews": 27
+  },
+  {
+    "name": "Style Hub Top 63",
+    "description": "Polyester top wear item designed for women under the Summer Essentials line.",
+    "price": 49.99,
+    "discountPrice": 46.99,
+    "countInStock": 36,
+    "sku": "ST-063",
+    "category": "Top Wear",
+    "brand": "Style Hub",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "White",
+      "Beige"
+    ],
+    "collections": "Summer Essentials",
+    "material": "Polyester",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583007971185-b7ef5a7a35d0?auto=format&fit=crop&w=500",
+        "altText": "Pair of slim-fit men's chinos"
+      }
+    ],
+    "rating": 3.7,
+    "numReviews": 34
+  },
+  {
+    "name": "Bold Edge Bottom 64",
+    "description": "Linen Blend bottom wear item designed for women under the Formal Attire line.",
+    "price": 59.99,
+    "discountPrice": 55.49,
+    "countInStock": 39,
+    "sku": "BO-064",
+    "category": "Bottom Wear",
+    "brand": "Bold Edge",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Beige",
+      "Gray"
+    ],
+    "collections": "Formal Attire",
+    "material": "Linen Blend",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585386959984-a415522c12f0?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing flowy palazzo pants"
+      }
+    ],
+    "rating": 3.8,
+    "numReviews": 41
+  },
+  {
+    "name": "Elegance Wear Top 65",
+    "description": "Cotton top wear item designed for men under the Business Casual line.",
+    "price": 69.99,
+    "discountPrice": 63.99,
+    "countInStock": 42,
+    "sku": "EL-065",
+    "category": "Top Wear",
+    "brand": "Elegance Wear",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Gray",
+      "Red"
+    ],
+    "collections": "Business Casual",
+    "material": "Cotton",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560464024-54e05c1cb0fe?auto=format&fit=crop&w=500",
+        "altText": "Man wearing a blue button-down Oxford shirt"
+      }
+    ],
+    "rating": 3.9,
+    "numReviews": 48
+  },
+  {
+    "name": "Urban Threads Bottom 66",
+    "description": "Denim bottom wear item designed for men under the Weekend Vibes line.",
+    "price": 29.99,
+    "discountPrice": 29.99,
+    "countInStock": 45,
+    "sku": "UR-066",
+    "category": "Bottom Wear",
+    "brand": "Urban Threads",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Red",
+      "Black"
+    ],
+    "collections": "Weekend Vibes",
+    "material": "Denim",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1531966668630-d7a99b27f590?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing a white fashion blouse"
+      }
+    ],
+    "rating": 4.0,
+    "numReviews": 55
+  },
+  {
+    "name": "Metro Mode Top 67",
+    "description": "Polyester top wear item designed for women under the Summer Essentials line.",
+    "price": 39.99,
+    "discountPrice": 38.49,
+    "countInStock": 48,
+    "sku": "ME-067",
+    "category": "Top Wear",
+    "brand": "Metro Mode",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Black",
+      "Blue"
+    ],
+    "collections": "Summer Essentials",
+    "material": "Polyester",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583007971185-b7ef5a7a35d0?auto=format&fit=crop&w=500",
+        "altText": "Pair of slim-fit men's chinos"
+      }
+    ],
+    "rating": 4.1,
+    "numReviews": 62
+  },
+  {
+    "name": "Style Hub Bottom 68",
+    "description": "Linen Blend bottom wear item designed for women under the Formal Attire line.",
+    "price": 49.99,
+    "discountPrice": 46.99,
+    "countInStock": 1,
+    "sku": "ST-068",
+    "category": "Bottom Wear",
+    "brand": "Style Hub",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Blue",
+      "White"
+    ],
+    "collections": "Formal Attire",
+    "material": "Linen Blend",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585386959984-a415522c12f0?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing flowy palazzo pants"
+      }
+    ],
+    "rating": 4.2,
+    "numReviews": 69
+  },
+  {
+    "name": "Bold Edge Top 69",
+    "description": "Cotton top wear item designed for men under the Business Casual line.",
+    "price": 59.99,
+    "discountPrice": 55.49,
+    "countInStock": 4,
+    "sku": "BO-069",
+    "category": "Top Wear",
+    "brand": "Bold Edge",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "White",
+      "Beige"
+    ],
+    "collections": "Business Casual",
+    "material": "Cotton",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560464024-54e05c1cb0fe?auto=format&fit=crop&w=500",
+        "altText": "Man wearing a blue button-down Oxford shirt"
+      }
+    ],
+    "rating": 4.3,
+    "numReviews": 76
+  },
+  {
+    "name": "Elegance Wear Bottom 70",
+    "description": "Denim bottom wear item designed for men under the Weekend Vibes line.",
+    "price": 69.99,
+    "discountPrice": 63.99,
+    "countInStock": 7,
+    "sku": "EL-070",
+    "category": "Bottom Wear",
+    "brand": "Elegance Wear",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Beige",
+      "Gray"
+    ],
+    "collections": "Weekend Vibes",
+    "material": "Denim",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1531966668630-d7a99b27f590?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing a white fashion blouse"
+      }
+    ],
+    "rating": 4.4,
+    "numReviews": 83
+  },
+  {
+    "name": "Urban Threads Top 71",
+    "description": "Polyester top wear item designed for women under the Summer Essentials line.",
+    "price": 29.99,
+    "discountPrice": 29.99,
+    "countInStock": 10,
+    "sku": "UR-071",
+    "category": "Top Wear",
+    "brand": "Urban Threads",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Gray",
+      "Red"
+    ],
+    "collections": "Summer Essentials",
+    "material": "Polyester",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583007971185-b7ef5a7a35d0?auto=format&fit=crop&w=500",
+        "altText": "Pair of slim-fit men's chinos"
+      }
+    ],
+    "rating": 3.5,
+    "numReviews": 90
+  },
+  {
+    "name": "Metro Mode Bottom 72",
+    "description": "Linen Blend bottom wear item designed for women under the Formal Attire line.",
+    "price": 39.99,
+    "discountPrice": 38.49,
+    "countInStock": 13,
+    "sku": "ME-072",
+    "category": "Bottom Wear",
+    "brand": "Metro Mode",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Red",
+      "Black"
+    ],
+    "collections": "Formal Attire",
+    "material": "Linen Blend",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585386959984-a415522c12f0?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing flowy palazzo pants"
+      }
+    ],
+    "rating": 3.6,
+    "numReviews": 97
+  },
+  {
+    "name": "Style Hub Top 73",
+    "description": "Cotton top wear item designed for men under the Business Casual line.",
+    "price": 49.99,
+    "discountPrice": 46.99,
+    "countInStock": 16,
+    "sku": "ST-073",
+    "category": "Top Wear",
+    "brand": "Style Hub",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Black",
+      "Blue"
+    ],
+    "collections": "Business Casual",
+    "material": "Cotton",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560464024-54e05c1cb0fe?auto=format&fit=crop&w=500",
+        "altText": "Man wearing a blue button-down Oxford shirt"
+      }
+    ],
+    "rating": 3.7,
+    "numReviews": 4
+  },
+  {
+    "name": "Bold Edge Bottom 74",
+    "description": "Denim bottom wear item designed for men under the Weekend Vibes line.",
+    "price": 59.99,
+    "discountPrice": 55.49,
+    "countInStock": 19,
+    "sku": "BO-074",
+    "category": "Bottom Wear",
+    "brand": "Bold Edge",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Blue",
+      "White"
+    ],
+    "collections": "Weekend Vibes",
+    "material": "Denim",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1531966668630-d7a99b27f590?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing a white fashion blouse"
+      }
+    ],
+    "rating": 3.8,
+    "numReviews": 11
+  },
+  {
+    "name": "Elegance Wear Top 75",
+    "description": "Polyester top wear item designed for women under the Summer Essentials line.",
+    "price": 69.99,
+    "discountPrice": 63.99,
+    "countInStock": 22,
+    "sku": "EL-075",
+    "category": "Top Wear",
+    "brand": "Elegance Wear",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "White",
+      "Beige"
+    ],
+    "collections": "Summer Essentials",
+    "material": "Polyester",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583007971185-b7ef5a7a35d0?auto=format&fit=crop&w=500",
+        "altText": "Pair of slim-fit men's chinos"
+      }
+    ],
+    "rating": 3.9,
+    "numReviews": 18
+  },
+  {
+    "name": "Urban Threads Bottom 76",
+    "description": "Linen Blend bottom wear item designed for women under the Formal Attire line.",
+    "price": 29.99,
+    "discountPrice": 29.99,
+    "countInStock": 25,
+    "sku": "UR-076",
+    "category": "Bottom Wear",
+    "brand": "Urban Threads",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Beige",
+      "Gray"
+    ],
+    "collections": "Formal Attire",
+    "material": "Linen Blend",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585386959984-a415522c12f0?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing flowy palazzo pants"
+      }
+    ],
+    "rating": 4.0,
+    "numReviews": 25
+  },
+  {
+    "name": "Metro Mode Top 77",
+    "description": "Cotton top wear item designed for men under the Business Casual line.",
+    "price": 39.99,
+    "discountPrice": 38.49,
+    "countInStock": 28,
+    "sku": "ME-077",
+    "category": "Top Wear",
+    "brand": "Metro Mode",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Gray",
+      "Red"
+    ],
+    "collections": "Business Casual",
+    "material": "Cotton",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560464024-54e05c1cb0fe?auto=format&fit=crop&w=500",
+        "altText": "Man wearing a blue button-down Oxford shirt"
+      }
+    ],
+    "rating": 4.1,
+    "numReviews": 32
+  },
+  {
+    "name": "Style Hub Bottom 78",
+    "description": "Denim bottom wear item designed for men under the Weekend Vibes line.",
+    "price": 49.99,
+    "discountPrice": 46.99,
+    "countInStock": 31,
+    "sku": "ST-078",
+    "category": "Bottom Wear",
+    "brand": "Style Hub",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Red",
+      "Black"
+    ],
+    "collections": "Weekend Vibes",
+    "material": "Denim",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1531966668630-d7a99b27f590?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing a white fashion blouse"
+      }
+    ],
+    "rating": 4.2,
+    "numReviews": 39
+  },
+  {
+    "name": "Bold Edge Top 79",
+    "description": "Polyester top wear item designed for women under the Summer Essentials line.",
+    "price": 59.99,
+    "discountPrice": 55.49,
+    "countInStock": 34,
+    "sku": "BO-079",
+    "category": "Top Wear",
+    "brand": "Bold Edge",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Black",
+      "Blue"
+    ],
+    "collections": "Summer Essentials",
+    "material": "Polyester",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583007971185-b7ef5a7a35d0?auto=format&fit=crop&w=500",
+        "altText": "Pair of slim-fit men's chinos"
+      }
+    ],
+    "rating": 4.3,
+    "numReviews": 46
+  },
+  {
+    "name": "Elegance Wear Bottom 80",
+    "description": "Linen Blend bottom wear item designed for women under the Formal Attire line.",
+    "price": 69.99,
+    "discountPrice": 63.99,
+    "countInStock": 37,
+    "sku": "EL-080",
+    "category": "Bottom Wear",
+    "brand": "Elegance Wear",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Blue",
+      "White"
+    ],
+    "collections": "Formal Attire",
+    "material": "Linen Blend",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585386959984-a415522c12f0?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing flowy palazzo pants"
+      }
+    ],
+    "rating": 4.4,
+    "numReviews": 53
+  },
+  {
+    "name": "Urban Threads Top 81",
+    "description": "Cotton top wear item designed for men under the Business Casual line.",
+    "price": 29.99,
+    "discountPrice": 29.99,
+    "countInStock": 40,
+    "sku": "UR-081",
+    "category": "Top Wear",
+    "brand": "Urban Threads",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "White",
+      "Beige"
+    ],
+    "collections": "Business Casual",
+    "material": "Cotton",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560464024-54e05c1cb0fe?auto=format&fit=crop&w=500",
+        "altText": "Man wearing a blue button-down Oxford shirt"
+      }
+    ],
+    "rating": 3.5,
+    "numReviews": 60
+  },
+  {
+    "name": "Metro Mode Bottom 82",
+    "description": "Denim bottom wear item designed for men under the Weekend Vibes line.",
+    "price": 39.99,
+    "discountPrice": 38.49,
+    "countInStock": 43,
+    "sku": "ME-082",
+    "category": "Bottom Wear",
+    "brand": "Metro Mode",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Beige",
+      "Gray"
+    ],
+    "collections": "Weekend Vibes",
+    "material": "Denim",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1531966668630-d7a99b27f590?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing a white fashion blouse"
+      }
+    ],
+    "rating": 3.6,
+    "numReviews": 67
+  },
+  {
+    "name": "Style Hub Top 83",
+    "description": "Polyester top wear item designed for women under the Summer Essentials line.",
+    "price": 49.99,
+    "discountPrice": 46.99,
+    "countInStock": 46,
+    "sku": "ST-083",
+    "category": "Top Wear",
+    "brand": "Style Hub",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Gray",
+      "Red"
+    ],
+    "collections": "Summer Essentials",
+    "material": "Polyester",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583007971185-b7ef5a7a35d0?auto=format&fit=crop&w=500",
+        "altText": "Pair of slim-fit men's chinos"
+      }
+    ],
+    "rating": 3.7,
+    "numReviews": 74
+  },
+  {
+    "name": "Bold Edge Bottom 84",
+    "description": "Linen Blend bottom wear item designed for women under the Formal Attire line.",
+    "price": 59.99,
+    "discountPrice": 55.49,
+    "countInStock": 49,
+    "sku": "BO-084",
+    "category": "Bottom Wear",
+    "brand": "Bold Edge",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Red",
+      "Black"
+    ],
+    "collections": "Formal Attire",
+    "material": "Linen Blend",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585386959984-a415522c12f0?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing flowy palazzo pants"
+      }
+    ],
+    "rating": 3.8,
+    "numReviews": 81
+  },
+  {
+    "name": "Elegance Wear Top 85",
+    "description": "Cotton top wear item designed for men under the Business Casual line.",
+    "price": 69.99,
+    "discountPrice": 63.99,
+    "countInStock": 2,
+    "sku": "EL-085",
+    "category": "Top Wear",
+    "brand": "Elegance Wear",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Black",
+      "Blue"
+    ],
+    "collections": "Business Casual",
+    "material": "Cotton",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560464024-54e05c1cb0fe?auto=format&fit=crop&w=500",
+        "altText": "Man wearing a blue button-down Oxford shirt"
+      }
+    ],
+    "rating": 3.9,
+    "numReviews": 88
+  },
+  {
+    "name": "Urban Threads Bottom 86",
+    "description": "Denim bottom wear item designed for men under the Weekend Vibes line.",
+    "price": 29.99,
+    "discountPrice": 29.99,
+    "countInStock": 5,
+    "sku": "UR-086",
+    "category": "Bottom Wear",
+    "brand": "Urban Threads",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Blue",
+      "White"
+    ],
+    "collections": "Weekend Vibes",
+    "material": "Denim",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1531966668630-d7a99b27f590?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing a white fashion blouse"
+      }
+    ],
+    "rating": 4.0,
+    "numReviews": 95
+  },
+  {
+    "name": "Metro Mode Top 87",
+    "description": "Polyester top wear item designed for women under the Summer Essentials line.",
+    "price": 39.99,
+    "discountPrice": 38.49,
+    "countInStock": 8,
+    "sku": "ME-087",
+    "category": "Top Wear",
+    "brand": "Metro Mode",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "White",
+      "Beige"
+    ],
+    "collections": "Summer Essentials",
+    "material": "Polyester",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583007971185-b7ef5a7a35d0?auto=format&fit=crop&w=500",
+        "altText": "Pair of slim-fit men's chinos"
+      }
+    ],
+    "rating": 4.1,
+    "numReviews": 2
+  },
+  {
+    "name": "Style Hub Bottom 88",
+    "description": "Linen Blend bottom wear item designed for women under the Formal Attire line.",
+    "price": 49.99,
+    "discountPrice": 46.99,
+    "countInStock": 11,
+    "sku": "ST-088",
+    "category": "Bottom Wear",
+    "brand": "Style Hub",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Beige",
+      "Gray"
+    ],
+    "collections": "Formal Attire",
+    "material": "Linen Blend",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585386959984-a415522c12f0?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing flowy palazzo pants"
+      }
+    ],
+    "rating": 4.2,
+    "numReviews": 9
+  },
+  {
+    "name": "Bold Edge Top 89",
+    "description": "Cotton top wear item designed for men under the Business Casual line.",
+    "price": 59.99,
+    "discountPrice": 55.49,
+    "countInStock": 14,
+    "sku": "BO-089",
+    "category": "Top Wear",
+    "brand": "Bold Edge",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Gray",
+      "Red"
+    ],
+    "collections": "Business Casual",
+    "material": "Cotton",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560464024-54e05c1cb0fe?auto=format&fit=crop&w=500",
+        "altText": "Man wearing a blue button-down Oxford shirt"
+      }
+    ],
+    "rating": 4.3,
+    "numReviews": 16
+  },
+  {
+    "name": "Elegance Wear Bottom 90",
+    "description": "Denim bottom wear item designed for men under the Weekend Vibes line.",
+    "price": 69.99,
+    "discountPrice": 63.99,
+    "countInStock": 17,
+    "sku": "EL-090",
+    "category": "Bottom Wear",
+    "brand": "Elegance Wear",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Red",
+      "Black"
+    ],
+    "collections": "Weekend Vibes",
+    "material": "Denim",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1531966668630-d7a99b27f590?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing a white fashion blouse"
+      }
+    ],
+    "rating": 4.4,
+    "numReviews": 23
+  },
+  {
+    "name": "Urban Threads Top 91",
+    "description": "Polyester top wear item designed for women under the Summer Essentials line.",
+    "price": 29.99,
+    "discountPrice": 29.99,
+    "countInStock": 20,
+    "sku": "UR-091",
+    "category": "Top Wear",
+    "brand": "Urban Threads",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Black",
+      "Blue"
+    ],
+    "collections": "Summer Essentials",
+    "material": "Polyester",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583007971185-b7ef5a7a35d0?auto=format&fit=crop&w=500",
+        "altText": "Pair of slim-fit men's chinos"
+      }
+    ],
+    "rating": 3.5,
+    "numReviews": 30
+  },
+  {
+    "name": "Metro Mode Bottom 92",
+    "description": "Linen Blend bottom wear item designed for women under the Formal Attire line.",
+    "price": 39.99,
+    "discountPrice": 38.49,
+    "countInStock": 23,
+    "sku": "ME-092",
+    "category": "Bottom Wear",
+    "brand": "Metro Mode",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Blue",
+      "White"
+    ],
+    "collections": "Formal Attire",
+    "material": "Linen Blend",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585386959984-a415522c12f0?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing flowy palazzo pants"
+      }
+    ],
+    "rating": 3.6,
+    "numReviews": 37
+  },
+  {
+    "name": "Style Hub Top 93",
+    "description": "Cotton top wear item designed for men under the Business Casual line.",
+    "price": 49.99,
+    "discountPrice": 46.99,
+    "countInStock": 26,
+    "sku": "ST-093",
+    "category": "Top Wear",
+    "brand": "Style Hub",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "White",
+      "Beige"
+    ],
+    "collections": "Business Casual",
+    "material": "Cotton",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560464024-54e05c1cb0fe?auto=format&fit=crop&w=500",
+        "altText": "Man wearing a blue button-down Oxford shirt"
+      }
+    ],
+    "rating": 3.7,
+    "numReviews": 44
+  },
+  {
+    "name": "Bold Edge Bottom 94",
+    "description": "Denim bottom wear item designed for men under the Weekend Vibes line.",
+    "price": 59.99,
+    "discountPrice": 55.49,
+    "countInStock": 29,
+    "sku": "BO-094",
+    "category": "Bottom Wear",
+    "brand": "Bold Edge",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Beige",
+      "Gray"
+    ],
+    "collections": "Weekend Vibes",
+    "material": "Denim",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1531966668630-d7a99b27f590?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing a white fashion blouse"
+      }
+    ],
+    "rating": 3.8,
+    "numReviews": 51
+  },
+  {
+    "name": "Elegance Wear Top 95",
+    "description": "Polyester top wear item designed for women under the Summer Essentials line.",
+    "price": 69.99,
+    "discountPrice": 63.99,
+    "countInStock": 32,
+    "sku": "EL-095",
+    "category": "Top Wear",
+    "brand": "Elegance Wear",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Gray",
+      "Red"
+    ],
+    "collections": "Summer Essentials",
+    "material": "Polyester",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583007971185-b7ef5a7a35d0?auto=format&fit=crop&w=500",
+        "altText": "Pair of slim-fit men's chinos"
+      }
+    ],
+    "rating": 3.9,
+    "numReviews": 58
+  },
+  {
+    "name": "Urban Threads Bottom 96",
+    "description": "Linen Blend bottom wear item designed for women under the Formal Attire line.",
+    "price": 29.99,
+    "discountPrice": 29.99,
+    "countInStock": 35,
+    "sku": "UR-096",
+    "category": "Bottom Wear",
+    "brand": "Urban Threads",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Red",
+      "Black"
+    ],
+    "collections": "Formal Attire",
+    "material": "Linen Blend",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585386959984-a415522c12f0?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing flowy palazzo pants"
+      }
+    ],
+    "rating": 4.0,
+    "numReviews": 65
+  },
+  {
+    "name": "Metro Mode Top 97",
+    "description": "Cotton top wear item designed for men under the Business Casual line.",
+    "price": 39.99,
+    "discountPrice": 38.49,
+    "countInStock": 38,
+    "sku": "ME-097",
+    "category": "Top Wear",
+    "brand": "Metro Mode",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Black",
+      "Blue"
+    ],
+    "collections": "Business Casual",
+    "material": "Cotton",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1560464024-54e05c1cb0fe?auto=format&fit=crop&w=500",
+        "altText": "Man wearing a blue button-down Oxford shirt"
+      }
+    ],
+    "rating": 4.1,
+    "numReviews": 72
+  },
+  {
+    "name": "Style Hub Bottom 98",
+    "description": "Denim bottom wear item designed for men under the Weekend Vibes line.",
+    "price": 49.99,
+    "discountPrice": 46.99,
+    "countInStock": 41,
+    "sku": "ST-098",
+    "category": "Bottom Wear",
+    "brand": "Style Hub",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      "Blue",
+      "White"
+    ],
+    "collections": "Weekend Vibes",
+    "material": "Denim",
+    "gender": "Men",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1531966668630-d7a99b27f590?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing a white fashion blouse"
+      }
+    ],
+    "rating": 4.2,
+    "numReviews": 79
+  },
+  {
+    "name": "Bold Edge Top 99",
+    "description": "Polyester top wear item designed for women under the Summer Essentials line.",
+    "price": 59.99,
+    "discountPrice": 55.49,
+    "countInStock": 44,
+    "sku": "BO-099",
+    "category": "Top Wear",
+    "brand": "Bold Edge",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "White",
+      "Beige"
+    ],
+    "collections": "Summer Essentials",
+    "material": "Polyester",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583007971185-b7ef5a7a35d0?auto=format&fit=crop&w=500",
+        "altText": "Pair of slim-fit men's chinos"
+      }
+    ],
+    "rating": 4.3,
+    "numReviews": 86
+  },
+  {
+    "name": "Elegance Wear Bottom 100",
+    "description": "Linen Blend bottom wear item designed for women under the Formal Attire line.",
+    "price": 69.99,
+    "discountPrice": 63.99,
+    "countInStock": 47,
+    "sku": "EL-100",
+    "category": "Bottom Wear",
+    "brand": "Elegance Wear",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      "Beige",
+      "Gray"
+    ],
+    "collections": "Formal Attire",
+    "material": "Linen Blend",
+    "gender": "Women",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1585386959984-a415522c12f0?auto=format&fit=crop&w=500",
+        "altText": "Woman wearing flowy palazzo pants"
+      }
+    ],
+    "rating": 4.4,
+    "numReviews": 93
+  }
+]
 
 module.exports = products;
